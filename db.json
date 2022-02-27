@@ -1,0 +1,66 @@
+{
+  "employeeList": [
+    {
+      "fName": "Prem",
+      "lName": "Gupta",
+      "dob": "1996-06-19T18:30:00.000Z",
+      "gender": "Male",
+      "email": "prem.gupta@gmail.com",
+      "mobile": "900987890989",
+      "address": "Noida",
+      "country": "India",
+      "salary": 700000,
+      "socialAccount": "Instagram",
+      "id": 1
+    },
+    {
+      "fName": "Niraj",
+      "lName": "Dubey",
+      "dob": "1995-07-11T18:30:00.000Z",
+      "gender": "Male",
+      "email": "niraj.dubey@gmail.com",
+      "mobile": "9879098769",
+      "address": "Greater Noida",
+      "country": "India",
+      "salary": 70000,
+      "socialAccount": "FaceBook",
+      "id": 2
+    },
+    {
+      "fName": "Nitesh",
+      "lName": "Rai",
+      "dob": "1994-01-31T18:30:00.000Z",
+      "gender": "Male",
+      "email": "nitesh.rai@gmail.com",
+      "mobile": "9098789099",
+      "address": "Delhi",
+      "country": "India",
+      "salary": 90000,
+      "socialAccount": "Instagram",
+      "id": 3
+    },
+    {
+      "fName": "Vikash",
+      "lName": "Kumar",
+      "dob": "1996-06-10T18:30:00.000Z",
+      "gender": "Male",
+      "email": "vikash.kumar@gmail.com",
+      "mobile": "9087654567",
+      "address": "Noida",
+      "country": "India",
+      "salary": 50000,
+      "socialAccount": "FaceBook",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,79 @@
+<h2 mat-dialog-title>Add Employee Form</h2>
+
+<div mat-dialog-content>
+
+  <form [formGroup]="employeeForm">
+    <!--  First Name Input-->
+    <mat-form-field appearance="outline">
+      <mat-label> Enter Your First Name</mat-label>
+      <input matInput formControlName="fName" placeholder="First Name">
+    </mat-form-field>
+
+    <!--  Last Name Input-->
+    <mat-form-field appearance="outline">
+      <mat-label> Enter Your Last Name</mat-label>
+      <input matInput formControlName="lName" placeholder="Last Name">
+    </mat-form-field>
+
+    <!--  Date of Birth Input-->
+    <mat-form-field appearance="outline">
+      <mat-label>Enter Your DOB</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="dob" placeholder="DOB">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <!--  Gender Input-->
+    <label> <h2> Gender </h2> </label>
+    <mat-radio-group formControlName="gender" class="example-radio-group">
+      <mat-radio-button  class="example-radio-button" *ngFor="let gender of genderList" [value]="gender">
+        {{gender}}
+      </mat-radio-button>
+    </mat-radio-group>
+
+    <!--  Email Input-->
+    <mat-form-field appearance="outline">
+      <mat-label> Enter Your Email</mat-label>
+      <input matInput formControlName="email" type="email" placeholder="Exp: example@gmail.com">
+    </mat-form-field>
+
+    <!--  Mobile No Input-->
+    <mat-form-field appearance="outline">
+      <mat-label> Enter Your Mobile No</mat-label>
+      <input matInput formControlName="mobile" placeholder="Mobile No">
+    </mat-form-field>
+
+    <!--  Address Input-->
+    <mat-form-field appearance="outline">
+      <mat-label> Enter Your Address</mat-label>
+      <input matInput formControlName="address" placeholder="Address">
+    </mat-form-field>
+
+    <!--  Country Input-->
+    <mat-form-field appearance="outline">
+      <mat-label> Country Name</mat-label>
+      <input matInput formControlName="country" placeholder="Country">
+    </mat-form-field>
+
+    <!--  Salary Input-->
+    <mat-form-field appearance="outline">
+      <mat-label> Employee Salary </mat-label>
+      <input matInput formControlName="salary" type="number" placeholder="Salary">
+    </mat-form-field>
+
+    <!--  Social Media Account Input-->
+    <mat-form-field appearance="outline">
+      <mat-label> Social Media Account </mat-label>
+      <input matInput formControlName="socialAccount" placeholder="Social Account">
+    </mat-form-field>
+  </form>
+
+</div>
+
+
+
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close=""> Close </button>
+  <button mat-raised-button color="primary" (click)="addEmployee()" > {{actionBtn}} </button>
+
+</div>
