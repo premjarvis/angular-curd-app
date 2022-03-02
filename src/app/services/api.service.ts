@@ -21,6 +21,8 @@ export class ApiService {
     return this.http.put<any>("http://localhost:3000/employeeList/" +id, data)
   }
 
+
+
   deleteEmployee(id : number) {
     return this.http.delete<any>("http://localhost:3000/employeeList/" +id)
   }
