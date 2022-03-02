@@ -40,17 +40,17 @@
       "id": 3
     },
     {
-      "fName": "Vikash",
-      "lName": "Kumar",
-      "dob": "1996-06-10T18:30:00.000Z",
-      "gender": "Male",
-      "email": "vikash.kumar@gmail.com",
-      "mobile": "9087654567",
-      "address": "Noida",
+      "fName": "Priyanka ",
+      "lName": "Rai",
+      "dob": "1996-06-19T18:30:00.000Z",
+      "gender": "Female",
+      "email": "priyanka.rai@gmail.com",
+      "mobile": "6389876567",
+      "address": "New Delhi",
       "country": "India",
-      "salary": 50000,
+      "salary": 40000,
       "socialAccount": "FaceBook",
-      "id": 4
+      "id": 5
     }
   ],
   "comments": [
