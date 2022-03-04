@@ -1,29 +1,55 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
+baseurl = environment.baseUrl
 
   constructor(private http : HttpClient) { }
 
 
   postEmployee(data : any) {
-    return this.http.post<any>("http://localhost:3000/employeeList/", data)
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    return this.http.post(this.baseurl + "api/employee/create_emp", data, httpOptions)
   }
+
+
 
   getEmployee() {
-    return this.http.get<any>("http://localhost:3000/employeeList/")
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    return this.http.get<any>( this.baseurl + "api/employee/show_emp", httpOptions)
   }
 
+
+
   putEmployee(data : any, id : number) {
-    return this.http.put<any>("http://localhost:3000/employeeList/" +id, data)
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    return this.http.put<any>( this.baseurl + "api/employee/update_emp/" +id, data, httpOptions)
   }
 
 
 
   deleteEmployee(id : number) {
-    return this.http.delete<any>("http://localhost:3000/employeeList/" +id)
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    return this.http.delete( this.baseurl + "api/employee/delete_emp/" +id, httpOptions)
   }
 }
