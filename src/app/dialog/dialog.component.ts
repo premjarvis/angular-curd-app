@@ -74,8 +74,7 @@ export class DialogComponent implements OnInit {
 
 
   updateEmpRecord() {
-    this.api.putEmployee(this.employeeForm.value, this.editData.id)
-      .subscribe({
+    this.api.putEmployee(this.employeeForm.value, this.editData.id).subscribe({
         next:(res) => {
           alert("Employee Record Updated Successfully.....")
           this.employeeForm.reset()

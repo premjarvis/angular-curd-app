@@ -39,7 +39,7 @@ baseurl = environment.baseUrl
         'Content-Type': 'application/json'
       })
     };
-    return this.http.put<any>( this.baseurl + "api/employee/update_emp/" +id, data, httpOptions)
+    return this.http.post<any>( this.baseurl + "api/employee/update_emp?id=" +id, data, httpOptions)
   }
 
 
@@ -50,6 +50,6 @@ baseurl = environment.baseUrl
         'Content-Type': 'application/json'
       })
     };
-    return this.http.delete( this.baseurl + "api/employee/delete_emp/" +id, httpOptions)
+    return this.http.delete( this.baseurl + "api/employee/delete_emp?id=" +id, httpOptions)
   }
 }
